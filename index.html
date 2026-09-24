@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternakan N&A Wawasan Sdn Bhd | Halal Livestock & Meat Supplier Malaysia</title>
+    <!-- Google Fonts for Professional Corporate Look -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1E4620; /* Deep Forest Green for Halal/Agro Trust */
+            --secondary: #D4A373; /* Earth/Tan Accent */
+            --dark: #212529;
+            --light: #F8F9FA;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            background-color: var(--white);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(30, 70, 32, 0.85), rgba(30, 70, 32, 0.85)), url('hero-bg.jpg') no-repeat center center/cover;
+            /* Placeholder: Replace 'hero-bg.jpg' with a nice farm photo from folder "1. OUR OPERATION" */
+            background-color: var(--primary); 
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary);
+            margin: 10px auto 0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #666;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Feature / Grid Box Style */
+        .grid-4, .grid-3, .grid-2 {
+            display: grid;
+            gap: 30px;
+        }
+
+        .grid-4 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); }
+
+        .card {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Our Strengths Stats Panel */
+        .stats-bar {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item h2 {
+            font-size: 3rem;
+            color: var(--secondary);
+        }
+
+        /* Products Layout */
+        .product-section {
+            background-color: var(--light);
+        }
+
+        .product-category {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .product-category h3 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .product-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background-color: #E8F5E9;
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Timeline for How To Buy */
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline-item {
+            padding: 20px 30px;
+            background-color: var(--light);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--secondary);
+            position: relative;
+        }
+
+        .timeline-number {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        /* FAQ Accordion Elements */
+        .faq-item {
+            background-color: var(--light);
+            margin-bottom: 15px;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Contact Details & Buttons */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+
+        .info-row {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #1A1A1A;
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media(max-width: 768px) {
+            .nav-links { display: none; } /* Kept simple for raw file, can be toggled via JS */
+            .hero h1 { font-size: 2rem; }
+            section { padding: 50px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">TERNAKAN <span>N&A WAWASAN</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#how-to-buy">How to Buy</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero / Welcome Panel -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Trusted Livestock & Fresh Meat Supplier</h1>
